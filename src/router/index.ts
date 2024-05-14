@@ -8,13 +8,13 @@ const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
         {
-            path: '/meniu',
+            path: '/',
             name: Route.MENU,
             component: () => import('../views/HomeView.vue')
         },
         {
             path: '/:pathMatch(.*)*',
-            redirect: '/meniu'
+            redirect: '/'
         }
     ]
 });
