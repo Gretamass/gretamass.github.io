@@ -36,7 +36,7 @@ import { ref } from 'vue';
 
 const mealInfoList = ref([
     {
-        date: DateTime.now().startOf('week'),
+        date: DateTime.local().startOf('week'),
         breakfast: ['Natūralios vaisių sultys.', 'Braškių-pieno kokteilis.'],
         lunch: [
             'Pupelių sriuba (tausojantis), (augalinis). Kiaulienos maltinukai (tausojantis). Švieži agurkai ir pomidorai. Perlinės kruopos su morkomis. Stalo vanduo.'
@@ -45,7 +45,7 @@ const mealInfoList = ref([
     },
 
     {
-        date: DateTime.now().startOf('week').plus({ day: 1 }),
+        date: DateTime.local().startOf('week').plus({ day: 1 }),
         breakfast: ['Natūralios vaisių sultys.', 'Braškių-pieno kokteilis.'],
         lunch: [
             'Pupelių sriuba (tausojantis), (augalinis). Kiaulienos maltinukai (tausojantis). Švieži agurkai ir pomidorai. Perlinės kruopos su morkomis. Stalo vanduo.'
@@ -53,7 +53,7 @@ const mealInfoList = ref([
         dinner: ['Sklindžiai su rikota. Trintos braškės. Sezoninis vaisius. Žalioji arbata.']
     },
     {
-        date: DateTime.now().startOf('week').plus({ day: 2 }),
+        date: DateTime.local().startOf('week').plus({ day: 2 }),
         breakfast: ['Natūralios vaisių sultys.', 'Braškių-pieno kokteilis.'],
         lunch: [
             'Pupelių sriuba (tausojantis), (augalinis). Kiaulienos maltinukai (tausojantis). Švieži agurkai ir pomidorai. Perlinės kruopos su morkomis. Stalo vanduo.'
@@ -61,7 +61,7 @@ const mealInfoList = ref([
         dinner: ['Sklindžiai su rikota. Trintos braškės. Sezoninis vaisius. Žalioji arbata.']
     },
     {
-        date: DateTime.now().startOf('week').plus({ day: 3 }),
+        date: DateTime.local().startOf('week').plus({ day: 3 }),
         breakfast: ['Natūralios vaisių sultys.', 'Braškių-pieno kokteilis.'],
         lunch: [
             'Pupelių sriuba (tausojantis), (augalinis). Kiaulienos maltinukai (tausojantis). Švieži agurkai ir pomidorai. Perlinės kruopos su morkomis. Stalo vanduo.'
@@ -69,7 +69,7 @@ const mealInfoList = ref([
         dinner: ['Sklindžiai su rikota. Trintos braškės. Sezoninis vaisius. Žalioji arbata.']
     },
     {
-        date: DateTime.now().startOf('week').plus({ day: 4 }),
+        date: DateTime.local().startOf('week').plus({ day: 4 }),
         breakfast: ['Natūralios vaisių sultys.', 'Braškių-pieno kokteilis.'],
         lunch: [
             'Pupelių sriuba (tausojantis), (augalinis). Kiaulienos maltinukai (tausojantis). Švieži agurkai ir pomidorai. Perlinės kruopos su morkomis. Stalo vanduo.'
@@ -79,13 +79,13 @@ const mealInfoList = ref([
 ]);
 
 function format(date: DateTime): string {
-    const dateValue = DateTime.fromJSDate(new Date(date)).setLocale('lt');
+    const dateValue = DateTime.fromJSDate(new Date(date.toMillis())).setLocale('lt');
 
     return `${dateValue.monthLong} ${dateValue.day}`;
 }
 
 function getWeekDay(date: DateTime): string {
-    return DateTime.fromJSDate(new Date(date)).setLocale('lt').weekdayLong;
+    return DateTime.fromJSDate(new Date(date.toMillis())).setLocale('lt').weekdayLong || '-';
 }
 </script>
 

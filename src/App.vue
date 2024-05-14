@@ -1,8 +1,8 @@
 <template>
     <div class="page">
-        <div class="page__sidebar">
-            <Sidebar />
-        </div>
+        <!--        <div class="page__sidebar">-->
+        <!--            <Sidebar />-->
+        <!--        </div>-->
         <div class="page__content">
             <RouterView />
         </div>
@@ -11,7 +11,6 @@
 
 <script setup lang="ts">
 import { RouterView } from 'vue-router';
-import Sidebar from '@/components/PageSidebar.vue';
 </script>
 
 <style lang="scss">
