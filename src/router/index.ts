@@ -11,6 +11,10 @@ const router = createRouter({
             path: '/meniu',
             name: Route.MENU,
             component: () => import('../views/HomeView.vue')
+        },
+        {
+            path: '/:pathMatch(.*)*',
+            redirect: '/meniu'
         }
     ]
 });
