@@ -12,15 +12,15 @@
                 <div class="meal__menu">
                     <div class="meal__title">Pusryčiai</div>
                     <div v-for="meal in mealInfo.breakfast" :key="meal" class="meal__text">
-                        <Checkbox /> {{ meal }}
+                        {{ meal }}
                     </div>
                     <div class="meal__title">Pietūs</div>
                     <div v-for="meal in mealInfo.lunch" :key="meal" class="meal__text">
-                        <Checkbox /> {{ meal }}
+                        {{ meal }}
                     </div>
                     <div class="meal__title">Vakarienė</div>
                     <div v-for="meal in mealInfo.dinner" :key="meal" class="meal__text">
-                        <Checkbox /> {{ meal }}
+                        {{ meal }}
                     </div>
                 </div>
             </div>
@@ -30,7 +30,6 @@
 
 <script setup lang="ts">
 import { DateTime } from 'luxon';
-import { Checkbox } from '@/components/ui/checkbox';
 
 import { ref } from 'vue';
 
@@ -121,8 +120,8 @@ function getWeekDay(date: DateTime): string {
         border-bottom: 1px solid #525252;
         padding: 10px 15px;
 
-        background-color: hsl(var(--primary));
-        color: hsl(var(--primary-foreground));
+        background-color: hsl(240 5.9% 10%);
+        color: hsl(0 0% 98%);
     }
 
     &__title {
@@ -137,7 +136,7 @@ function getWeekDay(date: DateTime): string {
         border-bottom: 1px solid #525252;
         padding: 0 15px;
 
-        background-color: hsl(var(--secondary));
+        background-color: hsl(240 4.8% 95.9%);
     }
 
     &__text {

@@ -4,14 +4,14 @@
             <div class="header__title">Daily meal</div>
         </div>
         <div class="sidebar__navigation">
-            <Button
-                :variant="route.name === Route.MENU ? 'default' : 'ghost'"
-                class="w-full justify-start gap-4 transition ease-in-out"
-                @click="goToPage(Route.MENU)"
-            >
-                <Utensils />
-                <p class="text-sm">Maisto meniu</p>
-            </Button>
+            <!--            <Button-->
+            <!--                :variant="route.name === Route.MENU ? 'default' : 'ghost'"-->
+            <!--                class="w-full justify-start gap-4 transition ease-in-out"-->
+            <!--                @click="goToPage(Route.MENU)"-->
+            <!--            >-->
+            <Utensils />
+            <!--                <p class="text-sm">Maisto meniu</p>-->
+            <!--            </Button>-->
         </div>
         <div class="sidebar__footer footer">
             <div class="footer__title">Greta Masiulyte</div>
@@ -21,15 +21,14 @@
 
 <script setup lang="ts">
 import { Utensils } from 'lucide-vue-next';
-import { Button } from '@/components/ui/button';
 import { useRoute } from 'vue-router';
 import router, { Route } from '@/router';
 
-const route = useRoute();
-
-function goToPage(routeName: Route): void {
-    router.push({ name: routeName });
-}
+// const route = useRoute();
+//
+// function goToPage(routeName: Route): void {
+//     router.push({ name: routeName });
+// }
 </script>
 
 <style scoped lang="scss">

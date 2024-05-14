@@ -18,6 +18,10 @@ import { RouterView } from 'vue-router';
     height: 100vh;
 }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 .page {
     display: flex;
 
