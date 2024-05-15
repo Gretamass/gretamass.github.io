@@ -1,0 +1,1 @@
+import{_ as t,o as s,c as o,l as c}from"./index-B8ReCVoI.js";const n={},r={class:"title"};function a(e,_){return s(),o("h1",r,[c(e.$slots,"default",{},void 0,!0)])}const d=t(n,[["render",a],["__scopeId","data-v-9f509377"]]);export{d as M};
